@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "NoTemu",
+  "version": "1.0",
+  "description": "Removes all Temu results from the Google results pages.",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_popup": "overlay.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.google.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
